@@ -12,7 +12,7 @@ interface
 uses
   FireDAC.Comp.Client,
   Vcl.Grids,
- MSLoading,
+  MSLoading,
   Vcl.DBGrids;
 
 type
@@ -40,7 +40,7 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   quSQl.sql.text:= 'select * from enti';
- quSQL.OpenLoading;
+  quSQL.OpenLoading;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
