@@ -23,7 +23,6 @@ type
     DBGrid1: TDBGrid;
     Button1: TButton;
     quSQL: TFDQuery;
-    procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -41,13 +40,8 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  quSQl.sql.text:= 'select * from enti';
+  quSQl.sql.text:= 'select * from table';
   quSQL.OpenLoading;
-end;
-
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-  FDConnection1.Connected:= true;
 end;
 
 end.
