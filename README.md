@@ -4,6 +4,8 @@ Class Helper que auxilia na visualização enquanto executa a Query.
 
 ## ⚡️ Como utilizar o MsLoading
 
+Indicando MsLoading na uses do formulario, a FDQuery carrega a class helper OpenLoading.
+
 ```delphi
 unit View.formMain;
 
@@ -51,5 +53,3 @@ end;
 end.
 
 ```
-
-Indicando MsLoading na uses do formulario, a FDQuery carrega a class helper OpenLoading.
