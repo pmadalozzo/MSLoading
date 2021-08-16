@@ -52,4 +52,4 @@ end.
 
 ```
 
-# Indicando MsLoading na uses do formulario, a FDQuery carrega a class helper OpenLoading.
+Indicando MsLoading na uses do formulario, a FDQuery carrega a class helper OpenLoading.
