@@ -120,8 +120,8 @@
         <DCCReference Include="FireDAC.dcp"/>
         <DCCReference Include="FireDACCommonDriver.dcp"/>
         <DCCReference Include="FireDACCommon.dcp"/>
-        <DCCReference Include="MSLoading.pas"/>
-        <DCCReference Include="View\View.Loading.pas">
+        <DCCReference Include="src\MSLoading.pas"/>
+        <DCCReference Include="src\View\View.Loading.pas">
             <Form>formLoading</Form>
             <FormType>dfm</FormType>
         </DCCReference>
