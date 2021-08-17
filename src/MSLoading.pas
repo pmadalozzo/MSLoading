@@ -10,10 +10,11 @@ uses
 type
   THelperLoading = class helper for TFDQuery
    private
+
    public
      procedure RunTask(var aTask : iTask);
      procedure ExibirLoading;
-     procedure OpenLoading;
+     function Loading(aQuery : TFDQuery) : boolean;
   end;
 
 var
@@ -48,7 +49,7 @@ begin
   end);
 end;
 
-procedure THelperLoading.OpenLoading;
+function THelperLoading.Loading(aQuery : TFDQuery) : boolean;
 begin
   ExibirLoading;
   SetLength(AllTasks, 1);
@@ -61,7 +62,7 @@ begin
   procedure
   begin
     Self.Close;
-    sleep(10000);
+    //sleep(10000);
     TThread.Synchronize(nil,
     procedure
     begin
