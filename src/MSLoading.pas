@@ -14,7 +14,7 @@ type
    public
      procedure RunTask(var aTask : iTask);
      procedure ExibirLoading;
-     function OpenLoading(aQuery : TFDQuery) : boolean;
+     function OpenLoading : boolean;
   end;
 
 var
@@ -49,7 +49,7 @@ begin
   end);
 end;
 
-function THelperLoading.OpenLoading(aQuery : TFDQuery) : boolean;
+function THelperLoading.OpenLoading : boolean;
 begin
   ExibirLoading;
   SetLength(AllTasks, 1);
