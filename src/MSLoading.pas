@@ -10,16 +10,17 @@ uses
 type
   THelperLoading = class helper for TFDQuery
    private
-
    public
      procedure RunTask(var aTask : iTask);
      procedure ExibirLoading;
-     function OpenLoading : boolean;
+     function OpenLoading : boolean; overload;
+     function OpenLoading(aMessage : string) : boolean; overload;
   end;
 
 var
   FLoading : TformLoading;
   AllTasks : array of iTask;
+  FMenssage : string;
 
 implementation
 
@@ -36,6 +37,9 @@ begin
     procedure
     begin
       FLoading:= TformLoading.Create(nil);
+      if FMenssage <> '' then
+        FLoading.Label1.Caption:= FMenssage;
+
       FLoading.Show;
     end);
 
@@ -56,13 +60,21 @@ begin
   RunTask(AllTasks[0]);
 end;
 
+function THelperLoading.OpenLoading(aMessage: string): boolean;
+begin
+  FMenssage:= aMessage;
+  ExibirLoading;
+  SetLength(AllTasks, 1);
+  RunTask(AllTasks[0]);
+end;
+
 procedure THelperLoading.RunTask(var aTask: iTask);
 begin
   aTask:= TTask.Run(
   procedure
   begin
     Self.Close;
-    //sleep(10000);
+    sleep(10000);
     TThread.Synchronize(nil,
     procedure
     begin
