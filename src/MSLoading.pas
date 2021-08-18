@@ -74,7 +74,7 @@ begin
   procedure
   begin
     Self.Close;
-    sleep(10000);
+    //sleep(10000); descomentar para teste
     TThread.Synchronize(nil,
     procedure
     begin

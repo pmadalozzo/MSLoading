@@ -341,6 +341,7 @@ object formLoading: TformLoading
     Top = 207
     Width = 270
     Height = 28
+    Alignment = taCenter
     Anchors = []
     Caption = 'Carregando, Favor Aguardar !!!'
     Font.Charset = DEFAULT_CHARSET
