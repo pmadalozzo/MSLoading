@@ -13,8 +13,8 @@ type
    public
      procedure RunTask(var aTask : iTask);
      procedure ExibirLoading;
-     function OpenLoading : boolean; overload;
-     function OpenLoading(aMessage : string) : boolean; overload;
+     procedure OpenLoading; overload;
+     procedure OpenLoading(aMessage : string); overload;
   end;
 
 var
@@ -53,14 +53,14 @@ begin
   end);
 end;
 
-function THelperLoading.OpenLoading : boolean;
+procedure THelperLoading.OpenLoading;
 begin
   ExibirLoading;
   SetLength(AllTasks, 1);
   RunTask(AllTasks[0]);
 end;
 
-function THelperLoading.OpenLoading(aMessage: string): boolean;
+procedure THelperLoading.OpenLoading(aMessage: string);
 begin
   FMenssage:= aMessage;
   ExibirLoading;
